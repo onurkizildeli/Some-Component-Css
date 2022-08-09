@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Layout</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: sans-serif;
+                font-size: 24px;
+                color: #343a40;
+                display: grid;
+                grid-template-columns: 80px 400px 1fr 250px;
+                grid-template-rows: 80px 1fr;
+                height: 100vh;
+                text-align: center;
+                font-weight: 700;
+            }
+            nav,
+            section,
+            main,
+            aside {
+                padding-top: 20px;
+            }
+
+            nav {
+                background-color: #555;
+                grid-row: 1/ -1;
+                color: #fff;
+            }
+
+            menu {
+                background-color: #7048e8;
+
+                color: #fff;
+                grid-column: 2/ -1;
+                display: flex;
+                /*justify-content: space-between;*/
+                align-items: center;
+                gap: 12px;
+                padding: 0 15px;
+            }
+
+            button {
+                border-style: none;
+                color: #fff;
+                background-color: #6741d9;
+                padding: 10px;
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            menu button:last-child {
+                margin-left: auto;
+                background-color: #d6336c;
+            }
+
+            section {
+                background-color: #e9ecef;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 40px;
+                overflow: scroll;
+            }
+
+            section div {
+                background-color: #fff;
+                height: 96px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+            }
+
+            aside {
+                background-color: #e9ecef;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>NAV</nav>
+        <menu>
+            <button>New</button>
+            <button>Reply</button>
+            <button>Forward</button>
+            <button>Mark Unread</button>
+
+            <button class="menu-right-button">Trash</button>
+        </menu>
+        <section>
+            <h2>Inbox</h2>
+
+            <div>Email 1</div>
+
+            <div>Email 2</div>
+
+            <div>Email 3</div>
+
+            <div>Email 4</div>
+
+            <div>Email 5</div>
+
+            <div>Email 6</div>
+
+            <div>Email 7</div>
+
+            <div>Email 8</div>
+            <div>Email 9</div>
+            <div>Email 10</div>
+            <div>Email 11</div>
+            <div>Email 12</div>
+        </section>
+        <main>Email view</main>
+        <aside>Additional info</aside>
+    </body>
+</html>
